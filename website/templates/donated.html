@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donors details</title>
+    <style>
+        table {
+            width: 40%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donors details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Blood Group</th>
+                <th>District</th>
+                <th>Taluk</th>
+                <!-- <th>Donation Date</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in donors %}
+                <tr>
+                    <td>{{ donor.name }}</td>
+                    <td>{{ donor.phone }}</td>
+                    <td>{{ donor.blood_group }}</td>
+                    <td>{{ donor.district }}</td>
+                    <td>{{ donor.taluk }}</td>
+                    <!-- <td>{{ donor.donation_date }}</td> -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

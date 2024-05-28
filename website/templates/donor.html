@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/donor.css')}}">
+  <title>Donor Page</title>
+</head>
+<body>
+  <div class="donor-form-container">
+    <h1>Donate Blood</h1>
+    <div class="note"><strong> Note:</strong>Please fill out the form if you are below 18.</div>
+    <form method="POST" action="{{ url_for('donate')}}">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name"  name="name"  required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div> -->
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="blood-group">Blood Group</label>
+        <!-- <input type="text" id="blood-group" name="blood-group" required> -->
+        <select class="form-control" id="blood-group" name="blood_group" required>
+          <option value="a+">A+</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b-">B-</option>
+          <option value="ab+">AB+</option>
+          <option value="ab-">AB-</option>
+          <option value="o+">O+</option>
+          <option value="o-">O-</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="district">District</label>
+        <input type="text" class="form-control" name="district" id="district" placeholder="Enter district">
+      </div>
+      <div class="form-group">
+        <label for="taluk">Taluk</label>
+        <input type="text" name="taluk" class="form-control" id="taluk" placeholder="Enter taluk">
+      </div>
+      
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

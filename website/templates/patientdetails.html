@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requested blood list</title>
+    <style>
+        table {
+            width: 40%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>requested blood list</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Hospital</th>
+                <th>Blood Group</th>
+                <th>District</th>
+                <th>Taluk</th>
+                <!-- <th>Donation Date</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+                <tr>
+                    <td>{{ patient.patient_name }}</td>
+                    <td>{{ patient.hospital_name }}</td>
+                    <td>{{ patient.blood_group1 }}</td>
+                    <td>{{ patient.district }}</td>
+                    <td>{{ patient.taluk }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

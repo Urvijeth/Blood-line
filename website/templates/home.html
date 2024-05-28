@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- -----jquerylinks--- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <!-- ------jquery scripts------ -->
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+     <script src="{{url_for('static',filename='js/home.js')}}"></script>
+      <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}"/>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           <a href=""> <img src="{{url_for('static',filename='img/blood-bank.png') }}" alt="logo"><h2>Blood Helpline</h2></a>
+        </div>
+        <div class="toggle"></div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="{{url_for('donor')}}">Donor</a></li>
+            <li><a href="{{url_for('patient')}}">Request</a></li>
+            <li><a href="#bottom">About-Us</a></li>
+        </ul>
+    </nav>
+    <div class="container1" id="x">
+    <!-- <img src="{{url_for('static',filename='img/Bloodhome.jpg') }}" class=""> -->
+
+      <a href="{{url_for('donor')}}"> <button class="button1">Donate</button></a>
+    </div><br>
+    <!-- -----blood------- -->
+    <div class="container2">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">123</h2>
+                  <h4>Number of A+ Donors</h4>
+                </div>
+              </div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">456</h2>
+                  <h4>Number of B+ Donors</h4>
+                </div>
+              </div>
+              <div class="w-100 d-none d-md-block d-lg-none"></div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">789</h2>
+                  <h4>Number of AB+ Donors</h4>
+                </div>
+              </div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">321</h2>
+                  <h4>Number of O+ Donors</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">654</h2>
+                  <h4>Number of A- Donors</h4>
+                </div>
+              </div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">345</h2>
+                  <h4>Number of B- Donors</h4>
+                </div>
+              </div>
+              <div class="w-100 d-none d-md-block d-lg-none"></div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">135</h2>
+                  <h4>Number of AB- Donors</h4>
+                </div>
+              </div>
+              <div class="col">
+                <div class="counter-box">
+                  <i class="fa fa-tint"></i>
+                  <h2 class="counter">543</h2>
+                  <h4>Number of O- Donors</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- ---footer----- -->
+<footer  id="bottom"class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>About Blood Helpline</h3>
+        <p>&copy; 2023 Blood Helpline. All Rights Reserved.</p>
+        <p>Blood Helpline is a non-profit organization dedicated to connecting blood donors with those in need. We believe that everyone deserves access to life-saving blood transfusions, and we work tirelessly to ensure that no one goes without. Our mission is to make blood donation easy, convenient, and accessible to all. Join us in our mission to save lives today!</p>
+        <p>123 Main St.<br>Anytown, USA<br>12345</p>
+        <p>Phone: (123) 456-7890<br>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+                 
+   
+    <script>
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0
+       
+}
+body{
+    font-family:"poppins",sans-serif;
+}
+a, a:hover{
+    text-decoration: none;
+}
+.logo img{
+    width: 95px;
+    margin-right: 10px;
+}
+nav{
+    background-color: rgb(231, 231, 231);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: rgb(226, 14, 14);
+    font-weight:190;
+
+}
+nav  a:hover{
+    color: rgb(255, 0, 0);
+}
+.logo{
+    flex:1;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.logo a:hover{
+    color:rgb(255, 0, 0);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li{
+    padding: 15px 40px;
+font-size: 25px;
+box-sizing: border-box;
+}
+
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+
+/* container2 */
+  .container1 {
+    background-image:url("../img/Bloodhome.jpg");
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    position: relative; 
+    
+} 
+
+
+
+
+.button1{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    background-color:red;
+    padding: 10px;
+    margin-left: 210px;
+    margin-top: 120px;
+    border-radius:10px;
+    padding: 7px;
+}
+.button1:hover{
+    transform: scale(1.1);
+}
+
+
+/* ----blockbox ai---- */
+.counter-box {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+  
+  .counter-box i {
+    font-size: 48px;
+    color: #e60073;
+    margin-bottom: 10px;
+  }
+  
+  .counter-box h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .counter-box h4 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  @media (max-width: 767.98px) {
+    .row {
+      flex-direction: column;
+    }
+    .col {
+      flex: none;
+    }
+  }
+
+  /* -----Footerline---- */
+  .footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    margin-top: auto;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .footer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
