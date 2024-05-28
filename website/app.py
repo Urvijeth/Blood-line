@@ -156,7 +156,7 @@ def patients():
 
         # Query for matching donors
         print("Querying for matching donors...")
-        matching_donors = Donor.query.filter_by(blood_group=blood_group1.split()[0], district=district).all()
+        matching_donors = Donor.query.filter_by(blood_group=blood_group1.split()[0].lower(), district=district).all()
         print(Donor.query.filter_by(blood_group=blood_group1.split()[0], district=district).statement)
 
         # Debugging: Print matching donors
