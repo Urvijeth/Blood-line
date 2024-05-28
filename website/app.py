@@ -172,41 +172,6 @@ def patients():
         return render_template('matching_donors.html', donors=matching_donors)
     return render_template("home.html")
 
-
-
-# @app.route('/patients', methods=['GET', 'POST'])
-# def patients():
-#     if request.method == 'POST':
-#         patient_name = request.form['patient_name']
-#         hospital_name = request.form['hospital_name']
-#         blood_group1 = request.form['blood_group1']
-#         district = request.form['district']
-#         taluk = request.form['taluk']
-
-#         # Debugging: Print received data
-#         print(f"Received patient data: {patient_name}, {hospital_name}, {blood_group1}, {district}, {taluk}")
-
-#         patient = Patient(
-#             patient_name=patient_name,
-#             hospital_name=hospital_name,
-#             blood_group1=blood_group1,
-#             district=district,
-#             taluk=taluk
-#         )
-#         db.session.add(patient)
-#         db.session.commit()
-
-#         # Query for matching donors
-#         matching_donors = Donor.query.filter_by(blood_group=blood_group1, district=district).all()
-
-#         # Debugging: Print matching donors
-#         for donor in matching_donors:
-#             print(f"Matching donor: {donor.name}, {donor.phone}, {donor.blood_group}, {donor.district}, {donor.taluk}")
-
-#         return render_template('matching_donors.html', donors=matching_donors)
-#     return render_template("home.html")
-
-
 @app.route('/')
 def login():
     return render_template('login.html')
@@ -235,4 +200,4 @@ if __name__ == '__main__':
 
 
 
-# end of this program
+
